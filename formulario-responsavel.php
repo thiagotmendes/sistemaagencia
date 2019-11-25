@@ -10,11 +10,11 @@
     </td>
     <td>
       <label for="telefone"> <strong> Telefone </strong> </label> <br>
-      <input type="text" name="telefone" id="telefone" value="<?php echo esc_attr( $telefone ) ?>" class="large-text">
+      <input type="text" name="telefone" id="telefone" value="<?php echo esc_attr( $telefone ) ?>" class="large-text tel">
     </td>
     <td>
       <label for="celular"> <strong> Celular </strong> </label> <br>
-      <input type="text" name="celular" id="celular" value="<?php echo esc_attr( $celular ) ?>" class="large-text">
+      <input type="text" name="celular" id="celular" value="<?php echo esc_attr( $celular ) ?>" class="large-text tel">
     </td>
   </tr>
 </table>
@@ -51,8 +51,8 @@
       <input type="text" name="num" value="<?php echo esc_attr( $num ) ?>" id="num" class="small-text">
     </td>
     <td>
-      <label for="bairro"> <strong> Bairro </strong> </label> <br>
-      <input type="text" name="bairro" value="<?php echo esc_attr( $bairro ) ?>" id="bairro" class="large-text">
+      <label for="complemento"> <strong> Complemento </strong> </label> <br>
+      <input type="text" name="complemento" value="<?php echo esc_attr( $complemento ) ?>" id="complemento" class="large-text">
     </td>
   </tr>
 </table>
@@ -60,12 +60,20 @@
 <table class="form-table">
   <tr>
     <td>
+      <label for="bairro"> <strong> Bairro </strong> </label> <br>
+      <input type="text" name="bairro" value="<?php echo esc_attr( $bairro ) ?>" id="bairro" class="large-text">
+    </td>
+    <td>
       <label for="uf"> <strong> UF </strong> </label> <br>
       <input type="text" name="uf" value="<?php echo esc_attr( $uf ) ?>" id="uf" class="small-text">
     </td>
     <td>
       <label for="cidade"> <strong> Cidade </strong> </label> <br>
       <input type="text" name="cidade" value="<?php echo esc_attr( $cidade ) ?>" id="cidade" class="large-text">
+    </td>
+    <td>
+      <label for="website"> <strong> Website:</strong> </label> <br>
+      <input type="text" name="website" id="website" value="<?php echo esc_attr( $website ) ?>" class="large-text" />
     </td>
   </tr>
 </table>

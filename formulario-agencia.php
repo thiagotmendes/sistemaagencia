@@ -6,13 +6,21 @@
     </td>
     <td>
         <label for="data_abertura"> <strong>Data abertura:</strong> </label> <br>
-        <?php
-        $dataCerta = explode('-', $data_abertura);
-        $data = $dataCerta[2]."/".$dataCerta[1]."/".$dataCerta[0];
-         ?>
         <input type="text" id="datepicker" name="data_abertura" id="data_abertura"
         value="<?php echo $data_abertura ?>"
         placeholder="<?php echo $data_abertura  ?>" class="large-text data" />
+    </td>
+    <td>
+      <label for="telefone_empresa"> <strong>Telefone Comercial</strong> </label> <br>
+      <input type="text" id="telefone_empresa" name="telefone_empresa"
+      value="<?php echo $telefone_empresa ?>"
+      placeholder="<?php echo $telefone_empresa  ?>" class="large-text tel" />
+    </td>
+    <td>
+      <label for="email_empresa"> <strong>Email Comercial</strong> </label> <br>
+      <input type="text" id="email_empresa" name="email_empresa"
+      value="<?php echo $email_empresa ?>"
+      placeholder="<?php echo $email_empresa  ?>" class="large-text" />
     </td>
   </tr>
 </table>
@@ -27,7 +35,7 @@
       <input type="text" name="nome_fantasia" id="nome_fantasia" value="<?php echo esc_attr( $nome_fantasia ) ?>" class="large-text" />
     </td>
     <td>
-      <label for="cadastrour"> <strong>Cadastrour:</strong> </label> <br>
+      <label for="cadastrour"> <strong>Cadastur:</strong> </label> <br>
       <input type="text" name="cadastrour" id="cadastrour" value="<?php echo esc_attr( $cadastrour ) ?>" class="large-text" />
     </td>
   </tr>

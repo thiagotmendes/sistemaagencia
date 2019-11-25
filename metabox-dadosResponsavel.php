@@ -28,6 +28,8 @@ function mb_responsavel_cb() {
   $bairro             = get_post_meta($post->ID, 'bairro', true);
   $uf                 = get_post_meta($post->ID, 'uf', true);
   $cidade             = get_post_meta($post->ID, 'cidade', true);
+  $complemento        = get_post_meta($post->ID, 'complemento', true);
+  $website            = get_post_meta($post->ID, 'website', true);
 
   include ('formulario-responsavel.php');
 }
@@ -35,34 +37,39 @@ function mb_responsavel_cb() {
 function save_carga_responsavel(){
   global $post;
 
-  $responsavel        = $_POST['responsavel'];
-  $email              = $_POST['email'];
-  $telefone           = $_POST['telefone'];
-  $celular            = $_POST['celular'];
-  $cpf                = $_POST['cpf'];
-  $data_nascimento    = $_POST['data_nascimento'];
-  $servico_telefonia  = $_POST['servico_telefonia'];
-  $cep                = $_POST['cep'];
-  $endereco           = $_POST['endereco'];
-  $num                = $_POST['num'];
-  $bairro             = $_POST['bairro'];
-  $uf                 = $_POST['uf'];
-  $cidade             = $_POST['cidade'];
+  if(!empty($_POST)){
+    $responsavel        = $_POST['responsavel'];
+    $email              = $_POST['email'];
+    $telefone           = $_POST['telefone'];
+    $celular            = $_POST['celular'];
+    $cpf                = $_POST['cpf'];
+    $data_nascimento    = $_POST['data_nascimento'];
+    $servico_telefonia  = $_POST['servico_telefonia'];
+    $cep                = $_POST['cep'];
+    $endereco           = $_POST['endereco'];
+    $num                = $_POST['num'];
+    $bairro             = $_POST['bairro'];
+    $uf                 = $_POST['uf'];
+    $cidade             = $_POST['cidade'];
+    $complemento        = $_POST['complemento'];
+    $website            = $_POST['website'];
 
-  update_post_meta(  $post->ID, 'responsavel', sanitize_text_field( $responsavel ) );
-  update_post_meta(  $post->ID, 'email', sanitize_text_field( $email ) );
-  update_post_meta(  $post->ID, 'telefone', sanitize_text_field( $telefone ) );
-  update_post_meta(  $post->ID, 'celular', sanitize_text_field( $celular ) );
-  update_post_meta(  $post->ID, 'cpf', sanitize_text_field( $cpf ) );
-  update_post_meta(  $post->ID, 'data_nascimento', sanitize_text_field( $data_nascimento ) );
-  update_post_meta(  $post->ID, 'servico_telefonia', sanitize_text_field( $servico_telefonia ) );
-  update_post_meta(  $post->ID, 'cep', sanitize_text_field( $cep ) );
-  update_post_meta(  $post->ID, 'endereco', sanitize_text_field( $endereco ) );
-  update_post_meta(  $post->ID, 'num', sanitize_text_field( $num ) );
-  update_post_meta(  $post->ID, 'bairro', sanitize_text_field( $bairro ) );
-  update_post_meta(  $post->ID, 'uf', sanitize_text_field( $uf ) );
-  update_post_meta(  $post->ID, 'cidade', sanitize_text_field( $cidade ) );
-
+    update_post_meta(  $post->ID, 'responsavel', sanitize_text_field( $responsavel ) );
+    update_post_meta(  $post->ID, 'email', sanitize_text_field( $email ) );
+    update_post_meta(  $post->ID, 'telefone', sanitize_text_field( $telefone ) );
+    update_post_meta(  $post->ID, 'celular', sanitize_text_field( $celular ) );
+    update_post_meta(  $post->ID, 'cpf', sanitize_text_field( $cpf ) );
+    update_post_meta(  $post->ID, 'data_nascimento', sanitize_text_field( $data_nascimento ) );
+    update_post_meta(  $post->ID, 'servico_telefonia', sanitize_text_field( $servico_telefonia ) );
+    update_post_meta(  $post->ID, 'cep', sanitize_text_field( $cep ) );
+    update_post_meta(  $post->ID, 'endereco', sanitize_text_field( $endereco ) );
+    update_post_meta(  $post->ID, 'num', sanitize_text_field( $num ) );
+    update_post_meta(  $post->ID, 'bairro', sanitize_text_field( $bairro ) );
+    update_post_meta(  $post->ID, 'uf', sanitize_text_field( $uf ) );
+    update_post_meta(  $post->ID, 'cidade', sanitize_text_field( $cidade ) );
+    update_post_meta(  $post->ID, 'complemento', sanitize_text_field( $complemento ) );
+    update_post_meta(  $post->ID, 'website', sanitize_text_field( $website ) );
+  }
 }
 
 add_action('save_post', 'save_carga_responsavel');
